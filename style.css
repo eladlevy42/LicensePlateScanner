@@ -137,7 +137,7 @@ button:hover {
 }
 
 footer {
-  position: absolute;
+  position: relative;
   width: 100%;
   bottom: 0;
   background-color: #333;
