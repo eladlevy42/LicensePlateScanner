@@ -1,0 +1,245 @@
+@import url(reset.css);
+/* style.css */
+* {
+  direction: rtl;
+}
+/* style.css */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header span {
+  display: inline-block;
+  background-color: #ffcc00;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid #333;
+  font-family: "Courier New", Courier, monospace;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 290px;
+  max-width: 320px;
+}
+form * {
+  margin-inline: 5px;
+}
+label {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+input[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffcc00;
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 200px;
+  aspect-ratio: 5/1;
+}
+
+button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 10px 0;
+  padding: 10px;
+  min-width: 300px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.list-group {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-group-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+#data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Media Query for Mobile Design */
+@media (max-width: 600px) {
+  header {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  header span {
+    padding: 8px 16px;
+    font-size: 18px;
+  }
+
+  form {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .list-group-item {
+    font-size: 14px;
+  }
+}
+
+/* Media Query for Extra Small Devices (max-width: 400px) */
+@media (max-width: 400px) {
+  header {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  header span {
+    padding: 6px 12px;
+    font-size: 16px;
+  }
+
+  form {
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input[type="number"] {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .list-group-item {
+    font-size: 12px;
+  }
+}
+
+/* Media Query for Smallest Devices (max-width: 320px) */
+@media (max-width: 320px) {
+  header {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  header span {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+
+  form {
+    width: 100%;
+    padding: 0 2px;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  input[type="number"] {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .list-group-item {
+    font-size: 10px;
+  }
+}

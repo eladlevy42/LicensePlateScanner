@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>License Plate Scanner</title>
+  </head>
+  <body>
+    <header>
+      <span>חיפוש לוחיות רישוי</span>
+    </header>
+    <main>
+      <form id="form" onsubmit="searchCarPlate(); return false;">
+        <label>מספר רכב: </label
+        ><input required type="number" id="plateInput" />
+        <button id="go" type="submit">סע!</button>
+      </form>
+      <div id="data"></div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+    <script src="index-script.js"></script>
+  </body>
+</html>
