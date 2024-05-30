@@ -2,30 +2,31 @@ let urlPlate =
   "https://data.gov.il/api/3/action/datastore_search?resource_id=053cea08-09bc-40ec-8f7a-156f0677aff3&q=";
 let urlCarData = `https://data.gov.il/api/3/action/datastore_search?resource_id=142afde2-6228-49f9-8a29-9b6c3a0cbe40&`;
 let plate = "";
-let car;
-let menuf;
-let ownership;
-let year;
-let model;
-let gimur;
-let delek_nm;
-let date;
-let dateOnRoad;
-let zihum;
-let degem_nm;
-let degem_cd;
-let volume;
-let hp;
-let weight;
-let karit;
-let hanaa;
-let merkav;
+let car,
+  menuf,
+  ownership,
+  year,
+  model,
+  gimur,
+  delek_nm,
+  date,
+  dateOnRoad,
+  zihum,
+  degem_nm,
+  degem_cd,
+  volume,
+  hp,
+  weight,
+  karit,
+  hanaa,
+  merkav;
 let dataElement = document.getElementById("data");
+let spinner = document.querySelector("#loader");
 async function searchCarPlate() {
   plate = document.getElementById("plateInput").value;
   if (plate.length == 8 || plate.length == 7) {
     let currentUrl = `${urlPlate}${plate}`;
-
+    spinner.style.display = "block";
     try {
       let response = await axios.get(currentUrl);
       let fullCar = response.data.result.records[0];
@@ -47,6 +48,7 @@ async function searchCarPlate() {
     <h6 class="card-title"> הכנס מספר תקין  </h6>
     </div>`;
   }
+  spinner.style.display = "none";
 }
 
 async function searchCarData() {

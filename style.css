@@ -1,4 +1,9 @@
 @import url("reset.css");
+#loader {
+  display: none;
+  aspect-ratio: 1/1;
+  width: 50px;
+}
 
 /* style.css */
 * {
@@ -8,7 +13,11 @@ html {
   height: 100%;
 }
 body {
-  height: 100%;
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 100vh;
   width: 100%;
   font-family: "Arial", sans-serif;
   margin: 0;
@@ -36,6 +45,7 @@ header span {
 }
 
 main {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,8 +147,9 @@ button:hover {
 }
 
 footer {
-  position: fixed;
+  position: sticky;
   left: 0;
+  top: 0;
   bottom: 0;
   width: 100%;
   background-color: #333;
