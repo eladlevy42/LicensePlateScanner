@@ -49,7 +49,7 @@ function DataCard() {
       <h6 className="text-xl font-bold mb-2">
         {tozeret_nm} {kinuy_mishari}
       </h6>
-      <ul className="list-disc pl-5">
+      <ul className="list-none pl-5">
         <li>יצרן: {tozeret_nm}</li>
         <li>מודל: {kinuy_mishari}</li>
         <li>שנת ייצור: {shnat_yitzur}</li>
