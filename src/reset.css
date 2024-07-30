@@ -1,17 +1,20 @@
-@import url("reset.css");
+@import "./reset.css";
+
+/* Your existing styles */
 #loader {
   display: none;
   aspect-ratio: 1/1;
   width: 50px;
 }
 
-/* style.css */
 * {
   direction: rtl;
 }
+
 html {
   height: 100%;
 }
+
 body {
   display: flex;
   flex-direction: column;
@@ -158,10 +161,11 @@ footer {
   display: flex;
   justify-content: space-around;
 }
+
 footer p {
   margin: 5px 0;
 }
-/* try */
+
 footer a {
   color: #fff;
   text-decoration: none;

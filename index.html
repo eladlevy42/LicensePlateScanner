@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -11,42 +11,7 @@
     <title>License Plate Scanner</title>
   </head>
   <body>
-    <header>
-      <span>חיפוש לוחיות רישוי</span>
-    </header>
-    <main>
-      <form id="form" onsubmit="searchCarPlate(); return false;">
-        <label>מספר רכב: </label
-        ><input required type="number" id="plateInput" />
-        <button id="go" type="submit">סע!</button>
-      </form>
-      <div id="data">
-        <img
-          id="loader"
-          src="https://assets-v2.lottiefiles.com/a/a7067d08-1153-11ee-8420-0fe7e415d9d3/4z631VZacc.gif"
-        />
-      </div>
-    </main>
-    <footer>
-      <p>
-        <i class="fab fa-github"></i>
-        <a href="https://github.com/eladlevy42" id="github-link">GitHub</a>
-      </p>
-      <p>
-        <i class="fab fa-whatsapp"></i>
-        <a href="https://wa.me/+972548010701" id="whatsapp-link">WhatsApp</a>
-      </p>
-      <p>
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:eladlevy42@gmail.com">eladlevy42@gmail.com</a>
-      </p>
-    </footer>
-    <script
-      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-      type="module"
-    ></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
-    <script src="index-script.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
