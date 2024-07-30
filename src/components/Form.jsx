@@ -12,12 +12,22 @@ function Form() {
     setLoading(true);
     setInitialSearch(false);
     try {
-      const response = await axios.get(
+      let response = await axios.get(
         `https://data.gov.il/api/3/action/datastore_search?resource_id=053cea08-09bc-40ec-8f7a-156f0677aff3&q=${plate}`
       );
       const fullCar = response.data.result.records[0];
+      response = await axios.get(
+        `https://data.gov.il/api/3/action/datastore_search?resource_id=142afde2-6228-49f9-8a29-9b6c3a0cbe40&q=${fullCar.degem_nm}`
+      );
+      fullCar.merkav = response.data.result.records[0].merkav;
+      fullCar.nefah_manoa = response.data.result.records[0].nefah_manoa;
+      fullCar.hanaa_nm = response.data.result.records[0].hanaa_nm;
+      fullCar.koah_sus = response.data.result.records[0].koah_sus;
+      fullCar.delek_nm = response.data.result.records[0].delek_nm;
+
       setCarData(fullCar);
     } catch (err) {
+      console.log(err);
       setCarData(null);
     } finally {
       setLoading(false);

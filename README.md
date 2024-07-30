@@ -1,6 +1,7 @@
 # License Plate Scanner
 
 License Plate Scanner is a simple React application that allows users to search for an Israeli license plate and get detailed information about the vehicle. The data is refreshed every day at 9:00 AM.
+You can use the app here: https://license-plate-scanner.vercel.app/
 
 ## Features
 
